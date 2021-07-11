@@ -22,3 +22,5 @@ The prediction is performed and an answer XML-file is created.
 # prediction_neighbor.py
 A second methodology to predict conbfigurations based on the nearest neighbor approach to validate the performance of the machine learning model to a muchg simpler approach.
 
+# Training data switchgear
+Example training data anonymized from real life example of a productive industrial switchgear configurator.

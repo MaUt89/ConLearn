@@ -37,6 +37,7 @@ def evaluate(epoch_logs, val_x, predictions, prediction_names, label_dict, featu
 
         training_xml_write(prediction_values, feature_values, settings["PROGRESS_XML_FILE_PATH"],
                            settings["EVALUATE_XML_FILE_PATH"])
+
         result = subprocess.run([r"C:\Program Files\camos\camosWinClient.exe", "-knb=gis_Configurations",
                                  "-ver=w", "-DBSettings=gis_DBSettings_QM", "-NoPKILogin",
                                  "-host=https://sn1t4801.ad101.siemens-energy.net/camosApps",

@@ -173,3 +173,51 @@ def training_xml_write(prediction_values, feature_values, progress_xml, evaluate
     tree.write(evaluate_xml)
 
     return
+
+
+def prediction_xml_write(prediction_values, feature_values, prediction_count, progress_xml, prediction_xml):
+    tree = et.parse(progress_xml)
+    root = tree.getroot()
+
+    for items in root:
+        for item in items:
+            if item.attrib['key'] in feature_values:
+                item.attrib['value'] = feature_values[item.attrib['key']][prediction_count]
+                item.attrib['valid'] = "1"
+                continue
+            if item.attrib['key'] in prediction_values:
+                item.attrib['value'] = prediction_values[item.attrib['key']]
+                item.attrib['valid'] = "1"
+
+    tree.write(prediction_xml)
+
+    return
+
+
+def configuration_xml_write(configuration_values, progress_xml, output_xml):
+    tree = et.parse(progress_xml)
+    root = tree.getroot()
+
+    for items in root:
+        for item in items:
+            if item.attrib['key'] in configuration_values:
+                item.attrib['value'] = configuration_values[item.attrib['key']]
+                item.attrib['valid'] = "1"
+                continue
+
+    tree.write(output_xml)
+
+    return
+
+
+def solver_xml_parse(input_xml, prediction_names):
+    predictions = {}
+    tree = et.parse(input_xml)
+    root = tree.getroot()
+
+    for items in root:
+        for item in items:
+            if item.attrib['key'] in prediction_names:
+                predictions[item.attrib['key']] = item.attrib['value']
+
+    return predictions

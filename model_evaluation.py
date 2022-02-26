@@ -409,8 +409,6 @@ class ConLearn:
                 tuples = zip(*sorted_pairs)
                 prediction_order[prediction_Name] = [list(tuple) for tuple in tuples]
 
-            # reversed(sorted(prediction_order.keys()))
-
             with open(output_file_path + "\Solver\VariableProbability.csv", 'w', newline='') as file:
                 file_writer = csv.writer(file, delimiter=';')
                 for variable in prediction_order:

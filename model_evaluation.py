@@ -368,71 +368,70 @@ class ConLearn:
                                  output_file_path + "\conf_" + str(i) + ".xml")
         return
 
-    def model_predict_solver(id, validation_input, label_names, label_dict, prediction_names, validation_data,
+        def model_predict_solver(id, validation_input, label_names, label_dict, prediction_names, validation_data,
                              progress_file_path, output_file_path):
 
-        for i in range(len(validation_data)):
-
-            model = tf.keras.models.load_model(
+        model = tf.keras.models.load_model(
                 r"c:\Users\mathi\Documents\Studium\Promotion\ConLearn\Models\\" + id + "\model.h5")
-            predictions = model.predict(validation_input)
+        predictions = model.predict(validation_input)
 
-            for i in range(len(validation_data)):
-                item_predictions = []
-                for pred in predictions:
-                    item_predictions.append(pred[len(validation_input) - len(validation_data) + i])
+        for i in range(len(validation_data)):
+            item_predictions = []
+            for pred in predictions:
+                item_predictions.append(pred[len(validation_input) - len(validation_data) + i])
 
-                pred_dict = {}
-                for j in range(len(label_names)):
-                    for k in range(len(prediction_names)):
-                        if label_names[j] == prediction_names[k]:
-                            pred_dict[prediction_names[k]] = item_predictions[j]
+            pred_dict = {}
+            for j in range(len(label_names)):
+                for k in range(len(prediction_names)):
+                    if label_names[j] == prediction_names[k]:
+                        pred_dict[prediction_names[k]] = item_predictions[j]
 
-                prediction_accuracy = {}
-                for prediction_Name in prediction_names:
-                    prediction_accuracy[prediction_Name] = max(pred_dict[prediction_Name])
+            prediction_accuracy = {}
+            for prediction_Name in prediction_names:
+                prediction_accuracy[prediction_Name] = max(pred_dict[prediction_Name])
 
-                prediction_values = {}
-                prediction_order = {}
-                for prediction_Name in prediction_names:
-                    for j in range(len(pred_dict[prediction_Name])):
-                        if pred_dict[prediction_Name][j] == max(pred_dict[prediction_Name]):
-                            prediction_values[prediction_Name] = label_dict[prediction_Name][j]
-                        if not prediction_order or not prediction_Name in prediction_order:
-                            prediction_order[prediction_Name] = [[label_dict[prediction_Name][j]],
-                                                                 [pred_dict[prediction_Name][j]]]
-                        else:
-                            prediction_order[prediction_Name][0].append(label_dict[prediction_Name][j])
-                            prediction_order[prediction_Name][1].append(pred_dict[prediction_Name][j])
+            prediction_values = {}
+            prediction_order = {}
+            for prediction_Name in prediction_names:
+                for j in range(len(pred_dict[prediction_Name])):
+                    if pred_dict[prediction_Name][j] == max(pred_dict[prediction_Name]):
+                        prediction_values[prediction_Name] = label_dict[prediction_Name][j]
+                    if not prediction_order or not prediction_Name in prediction_order:
+                        prediction_order[prediction_Name] = [[label_dict[prediction_Name][j]],
+                                                                [pred_dict[prediction_Name][j]]]
+                    else:
+                        prediction_order[prediction_Name][0].append(label_dict[prediction_Name][j])
+                        prediction_order[prediction_Name][1].append(pred_dict[prediction_Name][j])
 
-                for prediction_Name in prediction_order:
-                    zipped_lists = zip(prediction_order[prediction_Name][1], prediction_order[prediction_Name][0])
-                    sorted_pairs = sorted(zipped_lists, reverse=True)
-                    tuples = zip(*sorted_pairs)
-                    prediction_order[prediction_Name] = [list(tuple) for tuple in tuples]
+            for prediction_Name in prediction_order:
+                zipped_lists = zip(prediction_order[prediction_Name][1], prediction_order[prediction_Name][0])
+                sorted_pairs = sorted(zipped_lists, reverse=True)
+                tuples = zip(*sorted_pairs)
+                prediction_order[prediction_Name] = [list(tuple) for tuple in tuples]
 
-                with open(output_file_path + "\Solver\VariableProbability.csv", 'w', newline='') as file:
-                    file_writer = csv.writer(file, delimiter=';')
-                    for variable in prediction_order:
-                        line = [variable]
-                        # for j in range(len(prediction_order[variable][0])):
-                        # line.append(prediction_order[variable][1][j])
-                        file_writer.writerow(line)
+            # reversed(sorted(prediction_order.keys()))
 
-                with open(output_file_path + "\Solver\GivenVariables.csv", 'w') as file:
-                    file_writer = csv.writer(file, delimiter=';')
-                    file_writer.writerow(validation_data.loc[[i]])
+            with open(output_file_path + "\Solver\VariableProbability.csv", 'w', newline='') as file:
+                file_writer = csv.writer(file, delimiter=';')
+                for variable in prediction_order:
+                    line = [variable]
+                    for j in range(len(prediction_order[variable][0])):
+                        line.append(prediction_order[variable][1][j])
+                    file_writer.writerow(line)
+
+            with open(output_file_path + "\Solver\GivenVariables.csv", 'w') as file:
+                file_writer = csv.writer(file, delimiter=';')
+                file_writer.writerow(validation_data.loc[[i]])
 
             configuration_xml_write(validation_data.iloc[i], progress_file_path,
                                     output_file_path + "\Solver\conf_withoutPrediction.xml")
 
             try:
                 result = subprocess.run(["java", "-jar",
-                                         r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\conf_identifier.jar",
-                                         r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\confs\Solver\VariableProbability.csv",
-                                         r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\confs\Solver\conf_withoutPrediction.xml",
-                                         "1"],
-                                        capture_output=True, text=True, timeout=100)
+                                        r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\conf_identifier.jar",
+                                        r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\confs\Solver\VariableProbability.csv",
+                                        r"C:\Users\mathi\Documents\Studium\Promotion\MF4ChocoSolver-main\ConfigurationChecker\confs\Solver\conf_withoutPrediction.xml",
+                                        "1"], capture_output=True, text=True, timeout=100)
 
                 if result.returncode == 0:
                     with open('solver_output.csv', 'w', newline='') as output:
@@ -443,13 +442,13 @@ class ConLearn:
                 print('Subprocess did not answer! Continue with another try...')
 
             prediction_values = solver_xml_parse(r"C:\Users\mathi\Documents\Studium\Promotion\ConLearn\Data\conf_1.xml",
-                                                 prediction_names)
+                                                prediction_names)
             print(str(i) + ": " + str(prediction_values))
 
             prediction_xml_write(prediction_values, validation_data, i, progress_file_path,
-                                 output_file_path + "\conf_" + str(i) + ".xml")
+                                output_file_path + "\conf_" + str(i) + ".xml")
 
-            for file in os.listdir(output_file_path + "\Solver"):
-                os.remove(os.path.join(output_file_path + "\Solver", file))
+        for file in os.listdir(output_file_path + "\Solver"):
+            os.remove(os.path.join(output_file_path + "\Solver", file))
 
         return

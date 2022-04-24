@@ -1,0 +1,172 @@
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_0.xml;inconsistent
+conf_1.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_10.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_100.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_11.xml;inconsistent
+conf_12.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_13.xml;inconsistent
+conf_14.xml;consistent
+conf_15.xml;consistent
+conf_16.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 2]), ARITHM ([gis_CableTypeLCC_DC = 2]), ARITHM ([gis_CableTypeLCC_Interlocking = 2]), ARITHM ([gis_CableTypeSAIsolatingLink = 2]), ARITHM ([gis_CableTypeToCT = 2]), ARITHM ([gis_CableTypeToDensityMonitor = 2]), ARITHM ([gis_CableTypeToHVDevice = 3]), ARITHM ([gis_CableTypeToVT = 2]), ARITHM ([gis_CableTypeVTIsolatingLink = 3]), ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_17.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_18.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_19.xml;inconsistent
+		Diag: [ARITHM ([gis_BayInterfaceSupplier = 0])]
+conf_2.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 10]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_20.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_21.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_22.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_23.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_24.xml;inconsistent
+conf_25.xml;consistent
+conf_26.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_27.xml;inconsistent
+conf_28.xml;consistent
+conf_29.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_3.xml;inconsistent
+conf_30.xml;consistent
+conf_31.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_ControlType = 0])]
+conf_32.xml;inconsistent
+conf_33.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_34.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 2]), ARITHM ([gis_CableTypeLCC_DC = 2]), ARITHM ([gis_CableTypeLCC_Interlocking = 2]), ARITHM ([gis_CableTypeSAIsolatingLink = 2]), ARITHM ([gis_CableTypeToCT = 2]), ARITHM ([gis_CableTypeToDensityMonitor = 2]), ARITHM ([gis_CableTypeToHVDevice = 3]), ARITHM ([gis_CableTypeToVT = 2]), ARITHM ([gis_CableTypeVTIsolatingLink = 3])]
+conf_35.xml;inconsistent
+		Diag: [ARITHM ([gis_BayInterface = 2]), ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 10]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_36.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_37.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 1]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_38.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_39.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_4.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1])]
+conf_40.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_ControlType = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_41.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_42.xml;inconsistent
+conf_43.xml;consistent
+conf_44.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_45.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 2]), ARITHM ([gis_CableTypeLCC_DC = 2]), ARITHM ([gis_CableTypeSAIsolatingLink = 2]), ARITHM ([gis_CableTypeToCT = 2]), ARITHM ([gis_CableTypeToDensityMonitor = 2]), ARITHM ([gis_CableTypeToHVDevice = 3]), ARITHM ([gis_CableTypeToVT = 2]), ARITHM ([gis_CableTypeVTIsolatingLink = 3])]
+conf_46.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 2]), ARITHM ([gis_CableTypeLCC_DC = 2]), ARITHM ([gis_CableTypeLCC_Interlocking = 2]), ARITHM ([gis_CableTypeSAIsolatingLink = 2]), ARITHM ([gis_CableTypeToCT = 2]), ARITHM ([gis_CableTypeToDensityMonitor = 2]), ARITHM ([gis_CableTypeToHVDevice = 3]), ARITHM ([gis_CableTypeToVT = 2]), ARITHM ([gis_CableTypeVTIsolatingLink = 3])]
+conf_47.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_48.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_49.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_5.xml;inconsistent
+conf_50.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 2]), ARITHM ([gis_CableTypeLCC_DC = 2]), ARITHM ([gis_CableTypeLCC_Interlocking = 2]), ARITHM ([gis_CableTypeSAIsolatingLink = 2]), ARITHM ([gis_CableTypeToCT = 2]), ARITHM ([gis_CableTypeToDensityMonitor = 2]), ARITHM ([gis_CableTypeToHVDevice = 3]), ARITHM ([gis_CableTypeToVT = 2]), ARITHM ([gis_CableTypeVTIsolatingLink = 3]), ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_51.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_52.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_53.xml;inconsistent
+		Diag: [ARITHM ([gis_BayInterfaceSupplier = 0]), ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_54.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_55.xml;inconsistent
+conf_56.xml;consistent
+conf_57.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeToCT = 1]), ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_58.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_59.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_6.xml;inconsistent
+conf_60.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_61.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_62.xml;inconsistent
+		Diag: [ARITHM ([gis_BayInterfaceSupplier = 2]), ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_63.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_64.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0])]
+conf_65.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 1]), ARITHM ([gis_CableTypeToVT = 0])]
+conf_66.xml;inconsistent
+conf_67.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_68.xml;inconsistent
+conf_69.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_7.xml;inconsistent
+conf_70.xml;consistent
+conf_71.xml;consistent
+conf_72.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeVTIsolatingLink = 1])]
+conf_73.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_74.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_75.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_76.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_77.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_78.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_79.xml;inconsistent
+conf_8.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_80.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_81.xml;inconsistent
+conf_82.xml;consistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_83.xml;inconsistent
+conf_84.xml;consistent
+conf_85.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_86.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 4]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_87.xml;inconsistent
+conf_88.xml;consistent
+		Diag: [ARITHM ([gis_CableTypeLCC_AC = 0]), ARITHM ([gis_CableTypeLCC_DC = 0]), ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToCT = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeToVT = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_89.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 1]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 2])]
+conf_9.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_90.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeSAIsolatingLink = 0]), ARITHM ([gis_CableTypeToDensityMonitor = 0]), ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_91.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1])]
+conf_92.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 0]), ARITHM ([gis_CableTypeVTIsolatingLink = 0])]
+conf_93.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeToHVDevice = 1])]
+conf_94.xml;inconsistent
+		Diag: [ARITHM ([gis_CableTypeLCC_Interlocking = 1]), ARITHM ([gis_CoreIdentificationBayInterface = 0]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 0])]
+conf_95.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_96.xml;inconsistent
+		Diag: [ARITHM ([gis_CoreIdentificationBayInterface = 2]), ARITHM ([gis_LocalControlUnitHalogenFreeWiring = 1])]
+conf_97.xml;inconsistent
+conf_98.xml;consistent
+conf_99.xml;consistent

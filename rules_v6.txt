@@ -1,0 +1,638 @@
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_Accessibility = 'Standard';
+
+gis_RatedFrequency = '50' -> gis_ACSupplyVoltage <> '240/139 V AC';
+
+gis_BayInterface = 'not applicable' -> gis_BayCabling = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'Others', 'Transformer terminal cubicle (TTC)'} or
+(gis_BayInterface in {'Integrated control cubicle size A, height 800 (iLCC)', 'Integrated control cubicle size B, height 1400 (iLCC)', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)'} and gis_BayInterfaceSupplier in {'HP GIS Sub-Supplier', 'HP GIS SWH Berlin'})
+-> gis_BayCabling <> 'not applicable';
+
+gis_BayInterface = 'Current transformer terminal box (CTB)' -> gis_BayCabling = 'bay cables with bay cabling by SWH Berlin with support bracket';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Others', 'Seperated local control cubicle (sLCC)'} or
+gis_BayInterfaceSupplier in {'External (not in scope of HP GIS)', 'HP GIS Sub-Supplier'} -> gis_BayCabling <> 'bay cables with bay cabling by SWH Berlin with support bracket and cable plate';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Others', 'Seperated local control cubicle (sLCC)'} or
+gis_BayInterfaceSupplier = 'HP GIS SWH Berlin' -> gis_BayCabling <> 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'Integrated control cubicle size A, height 800 (iLCC)', 'Integrated control cubicle size B, height 1400 (iLCC)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'}
+-> gis_BayCabling <> 'bay cables';
+
+gis_BayCabling = 'not applicable' -> gis_BayCablingType = 'not applicable';
+
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'bay cables'}
+-> gis_BayCablingType <> 'not applicable';
+
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'}
+-> gis_BayCablingType <> 'PVC';
+
+gis_BayCabling = 'not applicable' -> gis_BayCablingType <> 'halogenfree';
+
+gis_BayInterface <> 'Seperated local control cubicle (sLCC)' -> gis_BayInterfaceCableLaying = 'not applicable';
+
+gis_BayCabling = 'not applicable' -> gis_BayInterfaceCableLaying = 'not applicable';
+
+gis_BayInterface = 'not applicable' -> gis_BayInterfaceEngineering = 'not applicable';
+
+gis_BayInterface = 'not applicable' -> gis_BayInterfaceSupplier = 'not applicable';
+
+gis_BayInterface in {'not applicable', 'Others', 'Seperated local control cubicle (sLCC)'} -> gis_BayInterfaceSupplier <> 'HP GIS SWH Berlin';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Others', 'Transformer terminal cubicle (TTC)'} -> gis_BayInterfaceSupplier <> 'HP GIS Sub-Sub-Supplier';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} -> gis_BayInterfaceSupplier <> 'External (not in scope of HP GIS)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeLCC_AC = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} -> gis_CableTypeLCC_AC <> 'NYCY 4x4/4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} -> gis_CableTypeLCC_AC <> 'LiYYCY 4x4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'others', 'PVC'} -> gis_CableTypeLCC_AC <> 'LiHHC11Y 4x4 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeLCC_DC = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} -> gis_CableTypeLCC_DC <> 'NYCY 4x4/4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} -> gis_CableTypeLCC_DC <> 'LiYYCY 4x4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'others', 'PVC'} -> gis_CableTypeLCC_DC <> 'LiHHC11Y 4x4 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+(gis_BayInterface in {'Integrated control cubicle size A, height 800 (iLCC)', 'Integrated control cubicle size B, height 1400 (iLCC)', 'Seperated local control cubicle (sLCC)'} and gis_BusbarConfiguration = 'Double busbar') or
+gis_BayCablingType in {'halogenfree', 'others'} or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking <> 'NYCY 12x1,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking <> 'NYCY 24x1,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'others'} or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking <> 'LiYCY 25G1,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or gis_BayCabling = 'not applicable' or
+(gis_BayInterface in {'Integrated control cubicle size A, height 800 (iLCC)', 'Integrated control cubicle size B, height 1400 (iLCC)', 'Seperated local control cubicle (sLCC)'} and gis_BusbarConfiguration = 'Double busbar') or
+gis_BayCablingType in {'others', 'PVC'} or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking <> 'LiHC11Y 12G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'others', 'PVC'} or 
+gis_ControlType in {'digital control', 'not applicable'} -> gis_CableTypeLCC_Interlocking <> 'LiHC11Y 25G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeSAIsolatingLink = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeSAIsolatingLink <> 'LiHC11Y 25G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeSAIsolatingLink <> 'LiYCY 25G1,5 (PVC)';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeToCT = 'not applicable';
+
+gis_BayInterface = 'Current transformer terminal box (CTB)' -> gis_CableTypeToCT <> 'not applicable';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToCT <> 'LiHHC11Y 7G2,5 (halogenfree)';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToCT <> 'LiHHC11Y 7G4,0 (halogenfree)';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToCT <> 'LiHHC11Y 7G6,0 (halogenfree)';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToCT <> 'LiYYCY 7G2,5 (PVC)';
+
+gis_BayInterface = 'not applicable' or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToCT <> 'LiYYCY 7G4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeToDensityMonitor = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToDensityMonitor <> 'LIHC11Y 7G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToDensityMonitor <> 'LiYCY 7G1,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeToHVDevice = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables', 'not applicable'} or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToHVDevice <> 'LI2XCQ 47G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToHVDevice <> 'LIHC11Y 47G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Transformer terminal cubicle (TTC)'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToHVDevice <> 'LiYCY 47G1,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeToVT = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToVT <> 'LiHHC11Y 7G2,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeToVT <> 'LiHHC11Y 7G4,0 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToVT <> 'LiYYCY 7G2,5 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeToVT <> 'LiYYCY 7G4 (PVC)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling = 'not applicable' or 
+gis_BayCablingType = 'not applicable' -> gis_CableTypeVTIsolatingLink = 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables', 'not applicable'} or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeVTIsolatingLink <> 'LiHC11Y 25G1,5 (halogenfree) / LI2XCQ 47G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables', 'not applicable'} or 
+gis_BayCablingType in {'not applicable', 'others', 'PVC'} -> gis_CableTypeVTIsolatingLink <> 'LiHC11Y 47G1,5 (halogenfree) / LiHC11Y 47G1,5 (halogenfree)';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} or 
+gis_BayCabling in {'bay cables with bay cabling by SWH Berlin with support bracket and cable plate', 'bay cables with bay cabling by SWH Berlin with support bracket', 'bay cables with bay cabling by SWH Berlin with support bracket, cable plate and dummy frame', 'not applicable'} or 
+gis_BayCablingType in {'halogenfree', 'not applicable', 'others'} -> gis_CableTypeVTIsolatingLink <> 'LiYCY 25G1,5 (PVC) / LiYCY 47G1,5 (PVC)';
+
+gis_InspectionWindowSpringPositionCB in {'standard (closed doors)', 'with inspection window ON/OFF for spring drive mechanism'} -> gis_CB_ManualOff = 'no';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable'} -> gis_ControlType = 'not applicable';
+
+gis_BayInterface in {'Integrated control cubicle size A, height 800 (iLCC)', 'Integrated control cubicle size B, height 1400 (iLCC)', 'Others', 'Seperated local control cubicle (sLCC)'}
+-> gis_ControlType <> 'not applicable';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'Integrated control cubicle size A, height 800 (iLCC)', 'not applicable', 'Others', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'}
+-> gis_ControlType <> 'conventional control';
+
+gis_BayInterface in {'Current transformer terminal box (CTB)', 'not applicable', 'Others', 'Transfer cubicle size A, height 800 (TC)', 'Transfer cubicle size B, height 1400 (TC)', 'Transformer terminal cubicle (TTC)'}
+-> gis_ControlType <> 'digital control';
+
+gis_BayInterface = 'not applicable' or 
+(gis_BayInterface <> 'not applicable' and gis_BayInterfaceSupplier in {'External (not in scope of HP GIS)', 'not applicable'}) -> gis_CoreIdentificationBayInterface = 'not applicable';
+
+gis_BayInterface <> 'not applicable' and gis_BayInterfaceSupplier in {'HP GIS Sub-Supplier', 'HP GIS SWH Berlin'} -> gis_CoreIdentificationBayInterface <> 'not applicable';
+
+gis_InstallationSite = 'Outdoor' -> gis_CraneCapacity = '-1';
+
+gis_DCSupplyVoltage1 = '110 V DC' -> gis_DCSupplyVoltage2 = '110 V DC';
+
+gis_DCSupplyVoltage1 = '125 V DC' -> gis_DCSupplyVoltage2 = '125 V DC';
+
+gis_DCSupplyVoltage1 = '220 V DC' -> gis_DCSupplyVoltage2 = '220 V DC';
+
+gis_DCSupplyVoltage1 in {'110 V DC', '220 V DC'} -> gis_DCSupplyVoltageTolerance <> '+12% ... -28% ANSI (for 125 V)';
+
+gis_DCSupplyVoltage1 in {'125 V DC'} -> gis_DCSupplyVoltageTolerance <> '+25% ... -30% IEC (for 110 V, 220 V)';
+
+gis_InstallationSite = 'Outdoor' -> gis_ExistingBuilding = 'no';
+
+gis_ExistingGISExtension = 'yes' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' -> gis_ExistingBuilding = 'yes';
+
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_ExistingGISExtension = 'no';
+
+gis_ExistingGISExtension = 'no' -> gis_ExistingGISExtensionDirection = 'not applicable';
+
+gis_ExistingGISExtension = 'yes' -> gis_ExistingGISExtensionDirection <> 'not applicable';
+
+gis_FutureExtensionBusbarEnds = 'not applicable' -> gis_ExtensionWithoutSwitchingOff = 'not applicable';
+
+gis_FutureExtensionBusbarEnds = 'not applicable' -> gis_ExtensionWithoutSwitchingOff <> 'yes, without switch-off of other busbar sections';
+
+gis_BusbarConfiguration = 'Single busbar' or 
+gis_FutureExtensionBusbarEnds = 'not applicable' -> gis_ExtensionWithoutSwitchingOff <> 'yes, only neighboring bay';
+
+gis_BusbarConfiguration = 'Single busbar' or 
+gis_FutureExtensionBusbarEnds = 'not applicable' -> gis_ExtensionWithoutSwitchingOff <> 'yes, switch-off only during HV-test';
+
+gis_FutureExtensionBusbarEnds = 'not applicable' -> gis_ExtensionWithoutSwitchingOff <> 'yes, without any switch-off';
+
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_FailureTypeCircuitBreaker = 'not applicable';
+
+gis_BusbarConfiguration in {'In/Out Bay', 'Single busbar'} -> gis_FailureTypeCrossModule = 'not applicable';
+
+gis_DCSupplyVoltageTolerance in {'+12% ... -28% ANSI (for 125 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'} 
+-> gis_FunctionRangeClosingCoilControlVoltageCB <> '-15% ... +10% (IEC)';
+
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_FunctionRangeClosingCoilControlVoltageCB <> '-28% ... +12% (ANSI)';
+
+gis_DCSupplyVoltageTolerance in {'+12% ... -28% ANSI (for 125 V)', '+10% ... -15% IEC (for 110 V, 125 V, 220 V)', 'others'} 
+-> gis_FunctionRangeClosingCoilControlVoltageCB <> '-30% ... +25% (IEC)';
+
+gis_DCSupplyVoltageTolerance in {'+12% ... -28% ANSI (for 125 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_FunctionRangeMotorControlVoltageDSES <> '-15% ... +10% (IEC)';
+
+gis_MotorControlVoltageDSES in {'110 V DC', '220 V DC', 'others'} or
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_FunctionRangeMotorControlVoltageDSES <> '-28% ... +12% (ANSI)';
+
+gis_MotorControlVoltageDSES in {'125 V DC', 'others'} or
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+12% ... -28% ANSI (for 125 V)', 'others'}
+-> gis_FunctionRangeMotorControlVoltageDSES <> '-30% ... +25% (IEC)';
+
+gis_DCSupplyVoltageTolerance in {'+12% ... -28% ANSI (for 125 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_FunctionRangeTrippingCoilCB <> '-30% ... +10% (IEC)';
+
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_FunctionRangeTrippingCoilCB <> '-44% ... +12% (ANSI)';
+
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+12% ... -28% ANSI (for 125 V)', 'others'}
+-> gis_FunctionRangeTrippingCoilCB <> '-30% ... +25% (IEC)';
+
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_FutureExtensionBusbarEnds = 'not applicable';
+
+gis_ExistingGISExtensionDirection = 'to the right side' -> gis_FutureExtensionBusbarEnds <> 'to the left side';
+
+gis_ExistingGISExtensionDirection = 'to the left side' -> gis_FutureExtensionBusbarEnds <> 'to the right side';
+
+gis_ExistingGISExtension = 'yes' -> gis_FutureExtensionBusbarEnds <> 'to the left and right side';
+
+gis_FailureTypeCircuitBreaker = 'not applicable' -> gis_HVTestAfterCircuitBreakerMaintenance = 'not applicable';
+
+gis_FailureTypeCircuitBreaker in {'electrical failure', 'maintenance', 'mechanical failure'} -> gis_HVTestAfterCircuitBreakerMaintenance <> 'not applicable';
+
+gis_FailureTypeCrossModule = 'not applicable' -> gis_HVTestAfterCrossModuleMaintenance = 'not applicable';
+
+gis_FailureTypeCrossModule in {'electrical failure', 'maintenance', 'mechanical failure'} -> gis_HVTestAfterCrossModuleMaintenance <> 'not applicable';
+
+gis_BusbarConfiguration = 'Single busbar' or
+gis_FailureTypeCrossModule = 'not applicable' -> gis_HVTestAfterCrossModuleMaintenance <> 'yes';
+
+gis_BusbarConfiguration = 'Single busbar' or
+gis_FailureTypeCrossModule = 'not applicable' -> gis_HVTestAfterCrossModuleMaintenance <> 'no';
+
+gis_PositionInspectionWindow = 'without inspection window' -> gis_InspectionWindowCameraSet = 'no';
+
+gis_InstallationSite = 'Outdoor' -> gis_InspectionWindowCameraSet <> 'yes, with adapter at every inspection window for a fixed camera set (without camera set, not for outdoor) (surcharge)';
+
+gis_InstallationSite = 'Outdoor' -> gis_InspectionWindowCameraSet <> 'yes, with adapter at every inspection window for a mobile camera set (with camera set SIVIS®HV, not for outdoor) (surcharge)';
+
+gis_InstallationSite = 'Outdoor' -> gis_InspectionWindowCameraSet <> 'yes, with adapter at every inspection window for a mobile camera set (without camera set, not for outdoor) (surcharge)';
+
+gis_PositionInspectionWindow = 'without inspection window' -> gis_InspectionWindowCover = 'not applicable';
+
+gis_ExistingBuilding = 'yes' -> gis_InstallationSite <> 'Outdoor';
+
+gis_SensgearInstallation in {'no', 'yes'} -> gis_InstallationSite <> 'Outdoor';
+
+gis_InstallationSite = 'Outdoor' -> gis_IPCode = 'IP 55';
+
+gis_BayInterface = 'not applicable' or 
+(gis_BayInterface <> 'not applicable' and gis_BayInterfaceSupplier in {'External (not in scope of HP GIS)', 'not applicable'})
+-> gis_LocalControlUnitHalogenFreeWiring = 'not applicable';
+
+gis_BayInterface <> 'not applicable' and gis_BayInterfaceSupplier in {'HP GIS Sub-Supplier', 'HP GIS SWH Berlin'}
+-> gis_LocalControlUnitHalogenFreeWiring <> 'not applicable';
+
+gis_DCSupplyVoltage1 = '110 V DC' -> gis_MotorControlVoltageDSES = '110 V DC';
+
+gis_DCSupplyVoltage1 = '125 V DC' -> gis_MotorControlVoltageDSES = '125 V DC';
+
+gis_DCSupplyVoltage1 = '220 V DC' -> gis_MotorControlVoltageDSES = '220 V DC';
+
+gis_DCSupplyVoltage1 = '110 V DC' -> gis_MotorVoltageCB = '110 V DC';
+
+gis_DCSupplyVoltage1 = '125 V DC' -> gis_MotorVoltageCB = '125 V DC';
+
+gis_DCSupplyVoltage1 = '220 V DC' -> gis_MotorVoltageCB = '220 V DC';
+
+gis_DCSupplyVoltageTolerance in {'+12% ... -28% ANSI (for 125 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'} 
+-> gis_MotorVoltageToleranceRangeCB <> '-15% ... +10% (IEC)';
+
+gis_MotorVoltageCB in {'110 V DC', '220 V DC', 'others'} or
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+25% ... -30% IEC (for 110 V, 220 V)', 'others'}
+-> gis_MotorVoltageToleranceRangeCB <> '-28% ... +12% (ANSI)';
+
+gis_MotorVoltageCB in {'125 V DC', 'others'} or
+gis_DCSupplyVoltageTolerance in {'+10% ... -15% IEC (for 110 V, 125 V, 220 V)', '+12% ... -28% ANSI (for 125 V)', 'others'}
+-> gis_MotorVoltageToleranceRangeCB <> '-30% ... +25% (IEC)';
+
+gis_FutureExtensionBusbarEnds in {'not applicable', 'to the right side'} -> gis_NoFutureBaysLeft = '0';
+
+gis_FutureExtensionBusbarEnds in {'to the left and right side', 'to the left side'} -> gis_NoFutureBaysLeft <> '0';
+
+gis_FutureExtensionBusbarEnds in {'not applicable', 'to the left side'} -> gis_NoFutureBaysRight = '0';
+
+gis_FutureExtensionBusbarEnds in {'to the left and right side', 'to the right side'} -> gis_NoFutureBaysRight <> '0';
+
+gis_InstallationSite = 'Outdoor' -> gis_OperatingTempIndoorMax = '-1';
+
+gis_InstallationSite = 'Outdoor' -> gis_OperatingTempIndoorMin = '-1';
+
+gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' -> gis_OperatingTempIndoorMax <> '-1';
+
+gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' -> gis_OperatingTempIndoorMin <> '-1';
+
+gis_InstallationSite = 'Outdoor' -> gis_OperatingTempOutdoorMax <> '-1';
+
+gis_InstallationSite = 'Outdoor' -> gis_OperatingTempOutdoorMin <> '-1';
+
+gis_PartialDischargeMeasurement = 'no' -> gis_PDAdaptorAmount = 'not applicable';
+
+gis_PartialDischargeMeasurement in {'no', 'yes, with online monitoring system'} -> gis_PDAdaptorAmount <> '3 in loose supply';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentBusbar <> '4000';
+ 
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentBusbar <> '4000';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentBusbar <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentBusbar <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentBusbar <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentBusbar <> '4000';
+
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_RatedCurrentBusbar = '-2';
+
+gis_BusbarConfiguration in {'Double busbar', 'Single busbar'} -> gis_RatedCurrentBusbar <> '-2';
+
+gis_RatedCurrentBusbar < '1000' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '1000';
+
+gis_RatedCurrentBusbar < '1250' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '1250';
+
+gis_RatedCurrentBusbar < '1600' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '1600';
+
+gis_RatedCurrentBusbar < '2000' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '2000';
+
+gis_RatedCurrentBusbar < '2500' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '2500';
+
+gis_RatedCurrentBusbar < '3150' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedCurrentBusbar < '4000' and gis_BusbarConfiguration <> 'In/Out Bay' -> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '3150';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+ 
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '50' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear <> 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '40'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Outdoor' and gis_ColourSwitchgear = 'RAL 1013 (pearl white)' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempIndoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_RatedFrequency = '60' and gis_InstallationSite = 'Indoor, if applicable with modules to outdoor' and gis_OperatingTempOutdoorMax >= '50'
+-> gis_RatedCurrentFeeder <> '4000';
+
+gis_BusbarConfiguration = 'Double busbar' -> gis_SingleBusbarMountingPosition = 'not applicable';
+
+gis_BusbarConfiguration = 'Single busbar' -> gis_SingleBusbarMountingPosition <> 'not applicable';
+
+gis_BusbarConfiguration = 'In/Out Bay' -> gis_SingleBusbarMountingPosition = 'BB1 upper';
+
+gis_BusbarConfiguration = 'Single busbar' -> gis_SpecifiedMRELevelBusbar = 'MRE-4 (Standard)';
+
+gis_FailureTypeCrossModule = 'not applicable' -> gis_SpecifiedMRELevelBusbar = 'MRE-4 (Standard)';
+
+gis_RCSTool = 'yes' -> gis_SpecifiedMRELevelBusbar <> 'MRE-3';
+
+gis_FailureTypeCrossModule in {'electrical failure', 'mechanical failure'} and gis_HVTestAfterCrossModuleMaintenance = 'yes' -> gis_SpecifiedMRELevelBusbar <> 'MRE-3';
+
+gis_FailureTypeCircuitBreaker = 'not applicable' -> gis_SpecifiedMRELevelCircuitBreaker = 'MRE-4 (Standard)';
+
+gis_FailureTypeCircuitBreaker in {'electrical failure', 'maintenance', 'mechanical failure'} and gis_BusbarConfiguration = 'Single busbar'
+-> gis_SpecifiedMRELevelCircuitBreaker = 'MRE-0';
+
+gis_BusbarConfiguration = 'Single busbar' -> gis_SpecifiedMRELevelCircuitBreaker <> 'MRE-1';
+
+gis_InstallationSite = 'Outdoor' -> gis_SurfaceCorrosionProtectionOutdoor <> 'not applicable';
+
+gis_InstallationSite = 'Outdoor' -> gis_SurfaceCorrosionProtectionIndoor = 'not applicable';
+
+gis_InstallationSite = 'Outdoor' -> gis_WeatherProtectiveCoverDensitySwitch <> 'not applicable';
+
+gis_InstallationSite = 'Outdoor' -> gis_WindConditions <> 'not applicable';
+
+gis_RatedVoltage in {'100', '72.5'} -> gis_BreakingCapacitiveCurrentCables = '125';
+
+gis_RatedVoltage = '123' -> gis_BreakingCapacitiveCurrentCables = '140';
+
+gis_RatedVoltage = '145' -> gis_BreakingCapacitiveCurrentCables = '160';
+
+gis_RatedVoltage = '72.5' -> gis_BreakingCapacitiveCurrentLines = '10';
+
+gis_RatedVoltage = '100' -> gis_BreakingCapacitiveCurrentLines = '20';
+
+gis_RatedVoltage = '123' -> gis_BreakingCapacitiveCurrentLines = '31.5';
+
+gis_RatedVoltage = '145' -> gis_BreakingCapacitiveCurrentLines = '50';
+
+gis_SwitchgearStandard = 'IEC' -> gis_BushingStandard = 'IEC';
+
+gis_PressureUnit = 'MPa (rel) addition bar (rel)' -> gis_DensityMonitorSupplier = 'WIKA';
+
+gis_PressureUnit <> 'MPa (rel) addition bar (rel)' -> gis_DensityMonitorSupplier <> 'WIKA';
+
+gis_SensgearInstallation = 'yes' -> gis_DensityMonitorSupplier = 'Comde';
+
+gis_SensgearInstallation = 'yes' -> gis_DensityMonitorType = 'Hybrid Modbus';
+
+gis_DensityMonitorSupplier = 'WIKA' -> gis_DensityMonitorType = 'Density monitor';
+
+gis_DensityMonitorSupplier = 'Trafag' -> gis_DensityMonitorType <> 'Hybrid Modbus';
+
+gis_DensityMonitorSupplier = 'WIKA' -> gis_GasMonitoring = 'Density switch with red-yellow-green indication';
+
+gis_DensityMonitorType in {'Hybrid Modbus', 'Hybrid'} -> gis_GasMonitoring = 'Density switch with scaled red-yellow-green indicaton and zero indicator';
+
+gis_DensityMonitorSupplier = 'Comde' or gis_DensityMonitorType in {'Hybrid Modbus', 'Hybrid'} 
+-> gis_GasMonitoring <> 'Density switch with scaled red-yellow-green indicaton and low pressure indicator';
+
+gis_TypeOperationInstructionFL = 'PDF' -> gis_NumberOperationInstructionFL = '1';
+
+gis_TypeOperationInstructionSL = 'PDF' -> gis_NumberOperationInstructionSL = '1';
+
+gis_SecondLanguageOperationInstruction = 'not applicable' -> gis_NumberOperationInstructionSL = 'not applicable';
+
+gis_RatedVoltage in {'100', '72.5'} -> gis_OperatingVoltage <> '110';
+
+gis_RatedVoltage in {'100', '72.5'} -> gis_OperatingVoltage <> '115';
+
+gis_RatedVoltage in {'123', '100', '72.5'} -> gis_OperatingVoltage <> '132';
+
+gis_RatedVoltage in {'123', '100', '72.5'} -> gis_OperatingVoltage <> '138';
+
+gis_Packing = 'None' -> gis_PackingStorageMonth = '0';
+
+gis_Packing = 'PackagingA12' -> gis_PackingStorageMonth = '12';
+
+gis_Packing = 'PackagingA24' -> gis_PackingStorageMonth = '24';
+
+gis_SensgearInstallation = 'yes' -> gis_PressureUnit <> 'MPa (rel) addition bar (rel)';
+
+gis_RatedFrequency = '50' -> gis_RatedImpulseCurrent = '2.5';
+
+gis_RatedFrequency = '60' -> gis_RatedImpulseCurrent = '2.6';
+
+gis_RatedLightningImpulseWithstandVoltage = '325' -> gis_RatedLightingImpulseWithstandVoltageAcrossIsolatingDistance = '375';
+
+gis_RatedLightningImpulseWithstandVoltage = '450' -> gis_RatedLightingImpulseWithstandVoltageAcrossIsolatingDistance = '520';
+
+gis_RatedLightningImpulseWithstandVoltage = '550' -> gis_RatedLightingImpulseWithstandVoltageAcrossIsolatingDistance = '630';
+
+gis_RatedLightningImpulseWithstandVoltage = '650' -> gis_RatedLightingImpulseWithstandVoltageAcrossIsolatingDistance = '750';
+
+gis_RatedVoltage = '72.5' -> gis_RatedLightningImpulseWithstandVoltage <> '450';
+
+gis_RatedVoltage = '72.5' -> gis_RatedLightningImpulseWithstandVoltage <> '550';
+
+gis_RatedVoltage in {'123', '72.5'} -> gis_RatedLightningImpulseWithstandVoltage <> '650';
+
+gis_RatedVoltage in {'123', '145'} -> gis_RatedLightningImpulseWithstandVoltage <> '325';
+
+gis_RatedVoltage = '72.5' -> gis_RatedShortDurationPowerFrequencyWithstandVoltage = '140';
+
+gis_RatedVoltage in {'123', '145'} -> gis_RatedShortDurationPowerFrequencyWithstandVoltage <> '185';
+
+gis_RatedVoltage = '145' -> gis_RatedShortDurationPowerFrequencyWithstandVoltage = '275';
+
+gis_RatedShortDurationPowerFrequencyWithstandVoltage = '140' -> gis_RatedShortDurationWithstandVoltageAcrossIsolatingDistance = '160';
+
+gis_RatedShortDurationPowerFrequencyWithstandVoltage = '185' -> gis_RatedShortDurationWithstandVoltageAcrossIsolatingDistance = '210';
+
+gis_RatedShortDurationPowerFrequencyWithstandVoltage = '230' -> gis_RatedShortDurationWithstandVoltageAcrossIsolatingDistance = '265';
+
+gis_RatedShortDurationPowerFrequencyWithstandVoltage = '275' -> gis_RatedShortDurationWithstandVoltageAcrossIsolatingDistance = '315';
+
+gis_FirstLanguageOperatingInstruction = 'czech' -> gis_SecondLanguageOperationInstruction <> 'czech';
+
+gis_FirstLanguageOperatingInstruction = 'dutch' -> gis_SecondLanguageOperationInstruction <> 'dutch';
+
+gis_FirstLanguageOperatingInstruction = 'danish' -> gis_SecondLanguageOperationInstruction <> 'danish';
+
+gis_FirstLanguageOperatingInstruction = 'english' -> gis_SecondLanguageOperationInstruction <> 'english';
+
+gis_FirstLanguageOperatingInstruction = 'finnish' -> gis_SecondLanguageOperationInstruction <> 'finnish';
+
+gis_FirstLanguageOperatingInstruction = 'german' -> gis_SecondLanguageOperationInstruction <> 'german';
+
+gis_FirstLanguageOperatingInstruction = 'french' -> gis_SecondLanguageOperationInstruction <> 'french';
+
+gis_FirstLanguageOperatingInstruction = 'italian' -> gis_SecondLanguageOperationInstruction <> 'italian';
+
+gis_FirstLanguageOperatingInstruction = 'norwegian' -> gis_SecondLanguageOperationInstruction <> 'norwegian';
+
+gis_FirstLanguageOperatingInstruction = 'polish' -> gis_SecondLanguageOperationInstruction <> 'polish';
+
+gis_FirstLanguageOperatingInstruction = 'portuguese' -> gis_SecondLanguageOperationInstruction <> 'portuguese';
+
+gis_FirstLanguageOperatingInstruction = 'rumainian' -> gis_SecondLanguageOperationInstruction <> 'rumainian';
+
+gis_FirstLanguageOperatingInstruction = 'russian' -> gis_SecondLanguageOperationInstruction <> 'russian';
+
+gis_FirstLanguageOperatingInstruction = 'spanish' -> gis_SecondLanguageOperationInstruction <> 'spanish';
+
+gis_FirstLanguageOperatingInstruction = 'swedish' -> gis_SecondLanguageOperationInstruction <> 'swedish';
+
+gis_FirstLanguageOperatingInstruction = 'brazilian' -> gis_SecondLanguageOperationInstruction <> 'brazilian';
+
+gis_FirstLanguageOperatingInstruction = 'hungarian' -> gis_SecondLanguageOperationInstruction <> 'hungarian';
+
+gis_FirstLanguageOperatingInstruction = 'slowakian' -> gis_SecondLanguageOperationInstruction <> 'slowakian';
+
+gis_FirstLanguageOperatingInstruction = 'turkish' -> gis_SecondLanguageOperationInstruction <> 'turkish';
+
+gis_FirstLanguageWarningInformationPlates = 'english' -> gis_SecondLanguageWarningInformationPlates <> 'english';
+
+gis_FirstLanguageWarningInformationPlates = 'german' -> gis_SecondLanguageWarningInformationPlates <> 'german';
+
+gis_InstallationSite = 'Outdoor' -> gis_SensgearInstallation = 'no, outdoor installation included';
+
+gis_SecondLanguageOperationInstruction = 'not applicable' -> gis_TypeOperationInstructionSL = 'not applicable';
+
+gis_SecondLanguageOperationInstruction <> 'not applicable' -> gis_TypeOperationInstructionSL <> 'not applicable';

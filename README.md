@@ -1,3 +1,5 @@
+Caution: this is the original version of ConLearn. more recent versions can be found in the other branches. The most recent version is the "initilized weights" branch.
+
 # ConLearn
 ConLearn is a machine learning programm able to learn and predict configurations based on a historical configurations (training data set). 
 It is also capable of semantic regularization during training phase by penalizing wrong predictions during learning phase.  

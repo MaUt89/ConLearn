@@ -1,6 +1,6 @@
 # ConLearn
 ConLearn is a machine learning programm able to learn and predict configurations based on a historical configurations (training data set). 
-The variable value ordering branch integrates the prediction made by ConbLearn into the search heuristics of a constraint solver.
+The variable value ordering branch integrates the prediction made by ConLearn into the search heuristics of a constraint solver.
 
 # learn.py
 Starting method for intilizing learning of the model. Label names, feature data and labels to be predicted are determined on basis of a csv file specifying configuration phases of the configuration process.

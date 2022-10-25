@@ -26,3 +26,6 @@ A second methodology to predict conbfigurations based on the nearest neighbor ap
 
 # Training data switchgear
 Example training data anonymized from real life example of a productive industrial switchgear configurator.
+
+# Request xml
+Anynomized version of the request .xml file used to trigger training, start prediction and write prediction result.
